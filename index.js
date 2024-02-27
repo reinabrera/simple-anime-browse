@@ -1,9 +1,10 @@
 import express from "express";
 import axios from "axios";
 import bodyParser from "body-parser";
+import 'dotenv/config';
 
 const app = express();
-const port = 3000;
+const port = process.env.port || 3000;
 const API_URL = "https://api.jikan.moe/v4/"
 const d = new Date();
 const year = d.getFullYear()-1;
