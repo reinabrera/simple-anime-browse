@@ -1,0 +1,17 @@
+<div class="c-carousel">
+    <ul id="" class="c-carousel-inner d-flex">
+      <% topAiring.forEach((item, index) => { %>
+      <li class="c-carousel-item item-<%= index + 1 %> col-12">
+        <img src="<%= item.images.jpg['image_url'] %>" draggable="false" class="d-block w-100" alt="...">
+      </li>
+      <% }) %>
+    </ul>
+    <button data-direction="left" class="c-carousel-control" type="button">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button data-direction="right" class="c-carousel-control" type="button">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+</div>

@@ -1,0 +1,275 @@
+header {
+    z-index: 99999;
+    position: relative;
+}
+
+header ul.nav > li:not(:first-child) {
+    margin-left: 20px;
+}
+
+header ul.nav > li a:hover {
+    color: rgba(255, 255,255, 0.5) !important;
+}
+
+header form input.form-control:focus {
+    border-color: rgb(255,255,255);
+    box-shadow: 0 0 0 0.25rem rgba(255,255,253,.25);
+    background: transparent;
+    color: white;
+}
+
+header form input.form-control {
+    background: transparent;
+    color: white;
+}
+
+header form input.form-control::placeholder {
+    color: white;
+}
+
+.main-container {
+    margin-top: -75px;
+}
+
+.logo img {
+    max-width: 75px;
+    filter: invert(1);
+}
+
+.hero {
+    background-image: url('../images/52-ar-lands.png');
+    background-size: cover;
+    background-position: top center;
+    padding: 165px 120px 90px 120px;
+    position: relative;
+    
+}
+
+.hero:before {
+    content: "";
+    position: absolute;
+    left: 0; right: 0;
+    top: 0; bottom: 0;
+    background: rgba(3,12,22,.98);
+    background: linear-gradient(0deg, rgba(3,12,22,.98) 0%, rgba(3,12,22,.98) 12%, rgba(3,12,22,0.87) 100%);
+}
+
+.hero .carousel-inner .carousel-item h2 {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.hero .carousel .carousel-control-prev {
+    justify-content: flex-start;
+    margin-left: -50px;
+}
+
+.hero .carousel button {
+    width: 40px;
+}
+
+.hero .carousel .carousel-control-next {
+    justify-content: flex-end;
+    margin-right: -50px;
+}
+
+.hero .carousel .trailer-btn {
+    text-decoration: none;
+    color: #821340;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    transition: 0.5s all;
+}
+
+.hero .carousel .trailer-btn:hover {
+    color: rgba(130, 19, 64, 0.6)
+}
+
+.hero .carousel .trailer-btn .svg-border {
+    display: inline-flex;
+    padding: 5px;
+    border: 1px solid;
+    border-radius: 50%;
+    margin-right: 10px;
+
+}
+
+.hero .carousel .trailer-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+
+.hero .carousel .details {
+    display: flex;
+    align-items: center;
+}
+
+.hero .carousel .details svg {
+    margin-right: 5px;
+    color: #dfc63f;
+}
+
+.hero .carousel .image--wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.hero .carousel .image--wrapper img {
+    width: 100%;
+    max-width: 272px;
+}
+
+.poster-card > div {
+    aspect-ratio: 225/315;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.hero .genres {
+    list-style: none;
+    padding: 0;
+}
+
+.hero .genres > li {
+    margin: 0;
+    display: inline-block;
+    padding: 2px 5px 2px 5px;
+    border-radius: 3px;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* anime genre tag colors */ 
+
+.action {
+    background-color: rgb(176, 58, 46);
+}
+
+.comedy {
+    background-color: rgb(244, 208, 63);
+}
+
+.fantasy {
+    background-color: rgb(26, 188, 156);
+}
+
+.horror {
+    background-color: rgb(128, 0, 0);
+    border: 1px solid rgb(255, 255, 255); /* White border for visibility */
+}
+
+.sports { 
+    background-color: rgb(220, 118, 51);
+}
+
+.adventure { 
+    background-color: rgb(39, 174, 96);
+}
+
+.drama {
+    background-color: rgb(169, 169, 169);
+}
+
+.mystery {
+    background-color: rgb(64, 64, 122);
+}
+
+.supernatural {
+    background-color: rgb(140, 20, 20);
+}
+
+.avant-grande {
+    background-color: rgb(149, 165, 166);
+}
+
+.romance {
+    background-color: rgb(219, 112, 147);
+}
+
+.suspense {
+    background-color: rgb(231, 84, 128);
+}
+
+.award-winning {
+    background-color: rgb(241, 196, 15);
+}
+
+.girls-love {
+    background-color: rgb(219, 112, 147);
+}
+
+.sci-fi {
+    background-color: rgb(23, 165, 137);
+}
+
+.boys-love {
+    background-color: rgb(219, 112, 147);
+}
+
+.gourmet {
+    background-color: rgb(23, 165, 137);
+}
+
+.slice-of-life {
+    background-color: rgb(64, 64, 122);
+}
+
+
+.multi-carousel {
+    background-color: rgb(3,12,22);
+}
+
+
+.multi-carousel .c-carousel-inner li img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.multi-carousel .c-carousel-inner li .vignette {
+    pointer-events: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 100px rgba(0,0,0,0.99) inset;
+    transition: 0.3s ease all;
+}
+
+.multi-carousel .c-carousel-inner li:hover .vignette {
+    box-shadow: 0 0 80px rgba(49,0,0,0.9) inset;
+}
+
+.multi-carousel .c-carousel-inner li .vignette p {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.multi-carousel .c-carousel-inner li .vignette .score svg {
+    color: #dfc63f;
+    margin-right: 5px;
+    width: 18px;
+    height: 18px;
+}
+
+.multi-carousel .c-carousel-inner li .vignette .score p span {
+    font-size: 20px;
+}
+
+
+.main-container.query {
+    background-color: rgb(3,12,22);     
+}
+
+.result.row {
+    padding-top: 140px;
+    padding-bottom: 140px;
+}
+
+.result.row h2 {
+    color: white;
+}
