@@ -3,15 +3,16 @@
 <div class="main-container query">
     <div class="container">
         <% if (locals.query) { %>
-            <div class="result row d-flex">
+            <div class="result">
                 <h2>Search result:</h2>
-                <% query.forEach((item, index) => { %>
-                    <div class="col-2  poster-card <%= index > 5 ? 'mt-3' : '' %>">
-                        <!-- <%= item.title %> -->
-                        <!-- <img class="rounded " src="<%= item.images.jpg.image_url %>" alt="<%= item.title %> poster"> -->
-                        <div class="rounded" style="background-image: url('<%= item.images.jpg.image_url %>');"></div>
-                    </div>
-                <% }) %>
+                <div class="items-wrapper d-flex flex-wrap">
+                    <% query.forEach((item) => { %>
+                        <div class="col-6 col-sm-4 col-md-3 col-lg-2 poster-card">
+                            <div class="rounded" style="background-image: url('<%= item.images.jpg.image_url %>');"></div>
+                        </div>
+                    <% }) %>
+                </div>
+
             </div>
         <% } %>
     </div>

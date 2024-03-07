@@ -27,22 +27,88 @@ header form input.form-control::placeholder {
     color: white;
 }
 
+button {
+    -webkit-appearance: none;
+    background-color: unset;
+    border: unset;
+    padding: 0;
+}
+
+header .form-search {
+    display: none;
+}
+
+header .close-btn svg {
+    color: white;
+    height: 20px;
+    width: 20px;
+}
+
+header form {
+    flex: 1;
+}
+
+header .close-btn {
+    display: none;
+}
+
+header .form-search.active .close-btn {
+    display: block;
+    margin-left: 10px;
+}
+
+header .form-search.active {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: rgb(3,12,22);
+    padding: 25px;
+    width: 100%;
+}
+
+header .form-search.active .form-search-wrapper {
+    display: flex;
+}
+
+@media screen and (min-width: 768px) {
+    header .form-search {
+        display: block;
+    }
+}
+
+header button.mobile-search-button {
+    width: 30px;
+}
+header button.mobile-search-button svg{
+    height: 20px;
+    width: 20px;
+    color: white;
+}
+
 .main-container {
     margin-top: -75px;
 }
 
 .logo img {
-    max-width: 75px;
+    max-width: 50px;
     filter: invert(1);
+}
+
+@media screen and (min-width: 768px) {
+    .logo img {
+        max-width: 75px;
+        filter: invert(1);
+    }
 }
 
 .hero {
     background-image: url('../images/52-ar-lands.png');
     background-size: cover;
     background-position: top center;
-    padding: 165px 120px 90px 120px;
+    padding: 120px 0 60px 0;
     position: relative;
-    
 }
 
 .hero:before {
@@ -61,7 +127,6 @@ header form input.form-control::placeholder {
 
 .hero .carousel .carousel-control-prev {
     justify-content: flex-start;
-    margin-left: -50px;
 }
 
 .hero .carousel button {
@@ -70,8 +135,20 @@ header form input.form-control::placeholder {
 
 .hero .carousel .carousel-control-next {
     justify-content: flex-end;
-    margin-right: -50px;
 }
+
+@media screen and (min-width: 992px) {
+    .hero .carousel .carousel-control-prev {
+        margin-left: -50px;
+    }
+    .hero .carousel .carousel-control-next {
+        margin-right: -50px;
+    }
+    .hero {
+        padding: 165px 120px 90px 120px;
+    }
+}
+
 
 .hero .carousel .trailer-btn {
     text-decoration: none;
@@ -265,11 +342,71 @@ header form input.form-control::placeholder {
     background-color: rgb(3,12,22);     
 }
 
-.result.row {
-    padding-top: 140px;
-    padding-bottom: 140px;
+.result {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+@media screen and (min-width: 768px) {
+    .result {
+        padding-top: 140px;
+        padding-bottom: 140px;
+    }
 }
 
-.result.row h2 {
+.result h2 {
     color: white;
 }
+
+
+@media (min-width: 992px) {
+    .result .items-wrapper {
+        margin-left: -1.5rem;
+    }
+    .result .items-wrapper div {
+        padding-left: 1.5rem;
+    }
+    .result .items-wrapper div:nth-child(n+7) {
+        margin-top: 1.5rem;
+    }  
+}
+
+@media (min-width: 768px) and (max-width: 991px)  {
+    .result .items-wrapper {
+        margin-left: -1.2rem;
+    }
+    .result .items-wrapper div {
+        padding-left: 1.2rem;
+    }
+    .result .items-wrapper div:nth-child(n+5) {
+        margin-top: 1.2rem;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+    .result .items-wrapper {
+        margin-left: -1rem;
+    }
+    .result .items-wrapper div {
+        padding-left: 1rem;
+    }
+    .result .items-wrapper div:nth-child(n+4) {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 575px) {
+    .result .items-wrapper {
+        margin-left: -.7rem;
+    }
+    .result .items-wrapper div {
+        padding-left: .7rem;
+    }
+    .result .items-wrapper div:nth-child(n+3) {
+        margin-top: .7rem;
+    }
+}
+
+
+
+
+

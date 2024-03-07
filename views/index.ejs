@@ -7,7 +7,7 @@
           <% topAiring.forEach((item, index) => { %>
             <div class="carousel-item <%= index == 0 ? 'active' : '' %>">
               <div class="row">
-                <div class="col-6">
+                <div class="col-lg-6 order-1 order-lg-0 mt-5 mt-lg-0">
                   <ul class="genres">
                     <% item['genres'].forEach((genre) => { %>
                       <li class="<%= genre['name'].toLowerCase() %>"><%= genre['name'] %></li>
@@ -30,7 +30,7 @@
                     <p class="m-0"><%= item.score %>/10 <%= item.duration != 'Unknown' ? " • " + item.duration : '' %> <%= ' • ' + item.rating %></p>
                   </div>
                 </div>
-                <div class="col-6">
+                <div class="col-lg-6">
                   <div class="image--wrapper">
                     <img src="<%= item.images.jpg['image_url'] %>">
                   </div>
@@ -59,7 +59,7 @@
       <div class="c-carousel mt-4">
         <ul id="" class="c-carousel-inner d-flex">
           <% upcomingAnime.forEach((item, index) => { %>
-          <li class="c-carousel-item item-<%= index + 1 %> col-2">
+          <li class="c-carousel-item item-<%= index + 1 %> col-6 col-sm-4 col-md-3 col-lg-2">
             <div class="wrapper  position-relative">
               <div class="vignette position-absolute d-flex flex-column justify-content-end px-3 py-4">
                 <p class="text-light mb-0"><%= item.title %></p>
@@ -95,7 +95,7 @@
       <div class="c-carousel mt-4">
         <ul id="" class="c-carousel-inner d-flex">
           <% topLastYear.forEach((item, index) => { %>
-          <li class="c-carousel-item item-<%= index + 1 %> col-2">
+          <li class="c-carousel-item item-<%= index + 1 %> col-6 col-sm-4 col-md-3 col-lg-2">
             <div class="wrapper  position-relative">
               <div class="vignette position-absolute d-flex flex-column justify-content-end px-3 py-4">
                 <p class="text-light mb-0"><%= item.title %></p>

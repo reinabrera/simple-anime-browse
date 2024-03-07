@@ -14,18 +14,40 @@
 }
 
 .c-carousel .c-carousel-inner > li {
-    padding-left: 50px;
+    padding-left: 10px;
+
 }
 
 .c-carousel .c-carousel-inner {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    margin-left: -50px;
+    margin-left: -10px;
+
     /* overflow-x: auto; */
     /* scroll-snap-type:x proximity;
     scroll-behavior: auto;
     scrollbar-width: 0;  */ 
+}
+
+@media screen and (min-width: 576px) {
+    .c-carousel .c-carousel-inner {
+        margin-left: -25px;
+
+    }
+    .c-carousel .c-carousel-inner > li {
+        padding-left: 25px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .c-carousel .c-carousel-inner {
+        margin-left: -50px;
+
+    }
+    .c-carousel .c-carousel-inner > li {
+        padding-left: 50px;
+    }
 }
 
 .c-carousel .c-carousel-inner::-webkit-scrollbar {
